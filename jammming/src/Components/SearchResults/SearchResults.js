@@ -3,7 +3,7 @@ import './SearchResults.css';
 
 import Tracklist from '../TrackList/TrackList';
 
-export class SearchResults extends React.Component { 
+class SearchResults extends React.Component { 
     render () {
         return (
     
@@ -18,4 +18,4 @@ export class SearchResults extends React.Component {
     }
 }
   
-  export default SearchResults;
+export default SearchResults;

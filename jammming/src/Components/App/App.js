@@ -29,6 +29,13 @@ export class App extends React.Component {
 
   }
 
+  addTrack(track) {
+    let tracks = this.state.playlistTracks;
+    tracks.push(track);
+
+    this.setState({playlistTracks: tracks});
+  }
+
 
   render () {
     return (
