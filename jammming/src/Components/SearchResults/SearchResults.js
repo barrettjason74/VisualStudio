@@ -10,7 +10,7 @@ export class SearchResults extends React.Component {
         
             <div className="SearchResults">
                 <h2>Results</h2>
-                <!-- Add a TrackList component -->
+                {'<!-- Add a TrackList component -->'}
             </div>
         );
     }
