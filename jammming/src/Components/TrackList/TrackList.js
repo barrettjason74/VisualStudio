@@ -24,4 +24,4 @@ class Tracklist extends React.Component {
     }
 }
   
-  export default Tracklist;
+export default Tracklist;

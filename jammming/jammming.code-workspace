@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Debug Android",
+				"cwd": "${workspaceFolder}",
+				"type": "reactnative",
+				"request": "launch",
+				"platform": "android"
+			}
+		]
+	}
+}
