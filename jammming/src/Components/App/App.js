@@ -29,6 +29,12 @@ export class App extends React.Component {
 
   }
 
+  search(term) {
+    Spotify.search(term).then(searchResults => {
+      this.setState({searchResults: searchResults});
+    });
+  }
+
   addTrack(track) {
     let tracks = this.state.playlistTracks;
     tracks.push(track);
@@ -45,6 +51,16 @@ export class App extends React.Component {
 
   updatePlaylistName(name) {
     this.setState({playlistName: name});
+  }
+
+  savePlaylist() {
+    const trackUris = this.state.playlistTracks.map(track => track.uri);
+    Spotify.savePlaylist(this.state.playlistName, trackUris).then(() => {
+      this.setState({
+        playlistName: 'New Playlist',
+        playlistTracks: []
+      });
+    });
   }
 
   render () {
