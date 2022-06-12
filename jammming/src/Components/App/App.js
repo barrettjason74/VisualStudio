@@ -12,6 +12,24 @@ import SearchBar from '../SearchBar/SearchBar';
 
 
 export class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      searchResults: [],
+      playlistName: 'New Playlist',
+      playlistTracks: []
+    };
+
+    this.search = this.search.bind(this);
+    this.addTrack = this.addTrack.bind(this);
+    this.removeTrack = this.removeTrack.bind(this);
+    this.updatePlaylistName = this.updatePlaylistName.bind(this);
+    this.savePlaylist = this.savePlaylist.bind(this);
+    
+  }
+
+
   render () {
     return (
 
